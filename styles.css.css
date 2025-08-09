@@ -1,0 +1,198 @@
+/* Estilos principais para o site profissional */
+:root {
+  --primary: #ff6f61; /* cor principal, altere conforme necessário */
+  --primary-dark: #e65c53; /* versão mais escura da cor principal */
+  --secondary: #333333;
+  --light: #f9f9f9;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: var(--secondary);
+  background: var(--light);
+  line-height: 1.6;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.nav-items a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-items a:hover {
+  color: var(--primary);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary) 0%, #ff9a8b 100%);
+  color: white;
+}
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+/* Botões */
+.btn {
+  background: var(--primary);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: var(--primary-dark);
+}
+.btn-secondary {
+  background: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  margin-left: 0.5rem;
+}
+.btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Seção de produto */
+.produto {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2rem;
+  border-radius: 8px;
+}
+.produto .imagens {
+  flex: 1;
+  margin-right: 2rem;
+  min-width: 250px;
+}
+.img-placeholder,
+.thumbnail {
+  background: #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+}
+.img-placeholder {
+  height: 250px;
+  font-weight: 600;
+}
+.thumbnail {
+  height: 60px;
+  font-size: 0.8rem;
+}
+.details {
+  flex: 1;
+  min-width: 250px;
+}
+.details h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+.preco {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+.beneficios {
+  margin-top: 1rem;
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 4px;
+}
+.beneficios p {
+  margin: 0.3rem 0;
+}
+
+/* Benefícios e FAQ */
+.beneficios-section,
+.faq-section {
+  margin: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.beneficios-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.beneficios-list .item {
+  flex: 1;
+  min-width: 220px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.beneficios-list h4 {
+  margin-bottom: 0.3rem;
+  color: var(--primary);
+}
+
+.faq-section h4 {
+  margin-bottom: 0.3rem;
+  color: var(--primary);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #fff;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  border-top: 1px solid #eee;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .produto {
+    flex-direction: column;
+  }
+  .produto .imagens {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
